@@ -1,19 +1,28 @@
-import '@styles/global.css';
+import "@styles/global.css";
+
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 
 export const metadata = {
-    title: 'A.I. Amplify',
-    description: 'Discover and share A.I. Prompts'
-}
+  title: "A.I. Amplify",
+  description: "Discover and share A.I. Prompts",
+};
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
-    <html lang='en'><body>
-        <div className='main'>
-            <div className='gradient'/>
+    <html lang="en">
+      <body>
+        <div className="main">
+          <div className="gradient" />
         </div>
-        <main className='app'>{children}</main>
-    </body></html>
-  )
-}
+        <main className="app">
+          {" "}
+          <Nav />
+          {children}
+        </main>
+      </body>
+    </html>
+  );
+};
 
-export default RootLayout
+export default RootLayout;
